@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.calculator {
+    border: 2px solid #444;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    width: 350px;
+}
+
+.display {
+    font-size: 2.5rem;
+    text-align: right;
+    background-color: #34495e;
+    border-radius: 10px;
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(145deg, #2980b9, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button.op {
+    background: linear-gradient(145deg, #e67e22, #d35400);
+}
+
+button.op:hover {
+    background: linear-gradient(145deg, #d35400, #e67e22);
+}
+
+button.clear {
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+}
+
+button.clear:hover {
+    background: linear-gradient(145deg, #c0392b, #e74c3c);
+}
+
+button.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        width: 90%; 
+        padding: 15px;
+    }
+
+    .display {
+        font-size: 2rem; 
+        height: 70px;
+    }
+
+    button {
+        height: 50px; 
+        font-size: 1.2rem; 
+    }
+
+    .buttons {
+        gap: 10px; 
+    }
+}
+
+@media (max-width: 360px) {
+    .display {
+        font-size: 1.8rem; 
+        height: 60px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+        </style>
+        </head>
+<body>
+  <div class="calculator">
+    <div class="display">0</div>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="op">/</button>
+      <button>4</button>
+      <button>5</button>
+    <button>6</button>
+      <button class="op">*</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="op">-</button>
+      <button class="button zero">0</button>
+      <button>.</button>
+      <button class="op">+</button>
+      <button >=</button>
+   
+          <button class="clear">C</button>
+      <button class="clear">DEL</button>
+      
+    
+    </div>
+  </div>
+  <script src="calci.js"></script>
+</body>
+</html>
